@@ -8,11 +8,12 @@ int main(){
     char guess;
     Board board;
     board.startGame();
+    board.printBoard();
     while(!board.checkEnd()){
-        board.printBoard();
         std::cout << "Enter the letter you are guessing: ";
         std::cin >> guess;
         board.guessLetter(guess);
+        board.printBoard();
     }
     board.printBoard();
 }
