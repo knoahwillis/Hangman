@@ -3,16 +3,11 @@
 #include <string>
 #include <random>
 #include <ctime>
+#include <fstream>
+#include <sstream>
 
 class Board{
-    std::string words[26] = {"apple", "banana", "carrot", 
-                            "donut", "grape", "hamburger",
-                            "insulin", "jelly", "kangaroo",
-                            "licorice", "monkey", "nancy",
-                            "octopus", "poop", "quack",
-                            "restitution", "steve", "trespass",
-                            "uvula", "violin", "wazowski",
-                            "xylophone", "yodel", "zippy"};
+    std::string words;
     std::string word;                   // string that contains the word to guess
     std::string incorrectGuesses;       // string that contains all of the incorrect guesses
     std::string correctGuesses;         // string that contains all of the correct guesses

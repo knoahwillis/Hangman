@@ -1,7 +1,4 @@
-#include "Board.hpp"
-
-int main(){
-    bool checkGuessed = false;
+bool checkGuessed = false;
     char guess;
     Board board;
     board.startGame();
@@ -24,5 +21,5 @@ int main(){
     else{
         std::cout << "Game Over!\nYou Win!" << std::endl;
     }
+    board.~Board();
     return 0;
-}
