@@ -46,6 +46,7 @@ void Board::printBoard(){
 		    std::cout << " |       " << std::endl;
 		    std::cout << "_|___    " << std::endl;
 		    std::cout << std::endl;
+            break;
         case 1:
             std::cout << "  ____   " << std::endl;
 		    std::cout << " |    |  " << std::endl;
@@ -101,7 +102,9 @@ void Board::printBoard(){
 		    std::cout << std::endl;
             break;
     };
-    std::cout << this->correctGuesses << std::endl;
+    std::cout << this->correctGuesses << "\n";
+    std::cout <<"Incorrect guesses:\n";
+    std::cout << this->incorrectGuesses << std::endl;
 };
 
 bool Board::checkEnd(){

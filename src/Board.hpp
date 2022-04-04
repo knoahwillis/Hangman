@@ -17,9 +17,10 @@ class Board{
     std::string incorrectGuesses;       // string that contains all of the incorrect guesses
     std::string correctGuesses;         // string that contains all of the correct guesses
     std::string allGuesses;             // string that contains all guesses
-    int numOfIncorrectGuesses = 0;      // int that conatins the number of incorrect guesses
 
 public:
+    int numOfIncorrectGuesses = 0;      // int that conatins the number of incorrect guesses
+    
     void startGame();                   // starts the game by randomly picking a word
 
     bool guessLetter(char);             // allows the player to guess a letter
