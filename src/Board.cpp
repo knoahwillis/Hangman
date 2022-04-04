@@ -8,6 +8,10 @@ Board::~Board(){
 
 }
 
+void Board::printWord(){
+    std::cout << "The word was " << this->word << std::endl;
+}
+
 void Board::startGame(){
     std::string line;
     int random = 0;

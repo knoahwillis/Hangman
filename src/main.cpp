@@ -18,6 +18,7 @@ int main(){
         board.guessLetter(guess);
     }
     board.printBoard();
+    board.printWord();
     if(board.numOfIncorrectGuesses == 6){
         std::cout << "Game Over!\nYou lose!" << std::endl;
     }
