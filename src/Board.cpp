@@ -12,7 +12,7 @@ void Board::startGame(){
     std::string line;
     int random = 0;
     int numOfLines = 0;
-    std::ifstream File("file.txt");
+    std::ifstream File("wordlist.txt");
 
         srand(time(0));
         random = rand() % 235886;
