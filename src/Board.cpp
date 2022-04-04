@@ -1,5 +1,9 @@
 #include "Board.hpp"
 
+Board::~Board(){
+
+}
+
 void Board::startGame(){
     srand(time(0));
     this->word = this->words[rand() % 26];
@@ -7,7 +11,7 @@ void Board::startGame(){
         this->correctGuesses += "_";
     }
     std::cout << "You have six wrong guesses. Good luck!" << std::endl;
-};
+}
 
 bool Board::guessLetter(char c){
     int checker = 0;
@@ -25,16 +29,16 @@ bool Board::guessLetter(char c){
     this->incorrectGuesses += c;
     this->numOfIncorrectGuesses++;
     return false;
-};
+}
 
 bool Board::checkIfGuessed(char c){
-    for(int i = 0; i < this->word.size(); i++){
-        if(this->word[i] == c){
+    for(int i = 0; i < this->allGuesses.size(); i++){
+        if(this->allGuesses[i] == c){
             return true;
         }
     }
     return false;
-};
+}
 
 void Board::printBoard(){
     switch(this->numOfIncorrectGuesses){
@@ -105,7 +109,7 @@ void Board::printBoard(){
     std::cout << this->correctGuesses << "\n";
     std::cout <<"Incorrect guesses:\n";
     std::cout << this->incorrectGuesses << std::endl;
-};
+}
 
 bool Board::checkEnd(){
     if(this->correctGuesses == this->word){
@@ -115,4 +119,4 @@ bool Board::checkEnd(){
         return true;
     }
     return false;
-};
+}

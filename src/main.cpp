@@ -1,17 +1,20 @@
-#include <iostream>
-#include <string>
 #include "Board.hpp"
 
-
-
 int main(){
+    bool checkGuessed = false;
     char guess;
     Board board;
     board.startGame();
     while(!board.checkEnd()){
         board.printBoard();
-        std::cout << "Enter the letter you are guessing: ";
+        std::cout << "Enter the letter (or word) you are guessing: ";
         std::cin >> guess;
+        checkGuessed = board.checkIfGuessed(guess);
+        while(checkGuessed){
+            std::cout << "You already guessed that letter! Guess again: ";
+            std::cin >> guess;
+            checkGuessed = board.checkIfGuessed(guess); 
+        }
         board.guessLetter(guess);
     }
     board.printBoard();
@@ -21,4 +24,6 @@ int main(){
     else{
         std::cout << "Game Over!\nYou Win!" << std::endl;
     }
+    board.~Board();
+    return 0;
 }

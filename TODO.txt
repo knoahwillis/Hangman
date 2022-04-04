@@ -1,7 +1,3 @@
 TODO:
 
-1. Make game class
-    a. Start game function
-        i. Pick word at random
-    b. Print board function 
-        i. 
+1. Learn how to pull from txt files
