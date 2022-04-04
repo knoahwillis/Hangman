@@ -33,4 +33,5 @@
 
 Hangman
 .vscode
-TODO.txt
+todo.txt
+.DS_Store
