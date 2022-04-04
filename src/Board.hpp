@@ -1,19 +1,32 @@
 #pragma once
+#include <iostream>
 #include <string>
+#include <random>
+#include <ctime>
 
 class Board{
+    std::string words[26] = {"apple", "banana", "carrot", 
+                            "donut", "grape", "hamburger",
+                            "insulin", "jelly", "kangaroo",
+                            "licorice", "monkey", "nancy",
+                            "octopus", "poop", "quack",
+                            "restitution", "steve", "trespass",
+                            "uvula", "violin", "wazowski",
+                            "xylophone", "yodel", "zippy"};
     std::string word;                   // string that contains the word to guess
     std::string incorrectGuesses;       // string that contains all of the incorrect guesses
     std::string correctGuesses;         // string that contains all of the correct guesses
     std::string allGuesses;             // string that contains all guesses
-    int incorrectGuesses;               // string that conatins the number of incorrect guesses
+    int numOfIncorrectGuesses;               // string that conatins the number of incorrect guesses
 
 public:
-    bool guessLetter(char);
+    void startGame();                   // starts the game by randomly picking a word
 
-    bool checkIfGuessed(char);
+    bool guessLetter(char);             // allows the player to guess a letter
 
-    void printBoard();
+    bool checkIfGuessed(char);          // checks if the letter has already been guessed
 
-    bool checkWin();
+    void printBoard();                  // prints out the board
+
+    bool checkWin();                    // checks if the player has won the game
 };

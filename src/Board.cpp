@@ -1,5 +1,11 @@
 #include "Board.hpp"
 
+void Board::startGame(){
+    srand(time(0));
+    this->word = this->words[rand() % 26];
+    std::cout << this->word << std::endl;
+};
+
 bool Board::guessLetter(char c){
     for(int i = 0; i < this->word.size(); i++){
         if(this->word[i] == c){
@@ -8,7 +14,7 @@ bool Board::guessLetter(char c){
             return true;
         }
     }
-    this->incorrectGuesses++;
+    this->numOfIncorrectGuesses++;
     this->incorrectGuesses += c;
     this->allGuesses += c;
     return false;
