@@ -1,3 +1,0 @@
-TODO:
-
-1. Learn how to pull from txt files
