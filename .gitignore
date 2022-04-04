@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+Hangman
+.vscode
+todo.txt
