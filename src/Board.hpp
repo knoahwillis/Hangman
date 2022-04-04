@@ -1,10 +1,7 @@
 #pragma once
-#include <iostream>
 #include <string>
-#include <random>
-#include <ctime>
-#include <fstream>
-#include <sstream>
+#include <iostream>
+
 
 class Board{
     std::string words;

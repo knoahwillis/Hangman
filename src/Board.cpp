@@ -1,15 +1,36 @@
 #include "Board.hpp"
+#include <ctime>
+#include <random>
+#include <fstream>
+#include <sstream>
 
 Board::~Board(){
 
 }
 
 void Board::startGame(){
-    srand(time(0));
-    this->word = this->words[rand() % 26];
+    std::string line;
+    int random = 0;
+    int numOfLines = 0;
+    std::ifstream File("file.txt");
+
+        srand(time(0));
+        random = rand() % 50;
+
+    while(std::getline(File, line))
+    {
+        ++numOfLines;
+
+        if(numOfLines == random)
+        {
+            this->word = line;
+        }
+
+    }
     for(int i = 0; i < this->word.size(); i++){
         this->correctGuesses += "_";
     }
+    std::cout << this->word << "\n";
     std::cout << "You have six wrong guesses. Good luck!" << std::endl;
 }
 
