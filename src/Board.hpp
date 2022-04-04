@@ -17,7 +17,7 @@ class Board{
     std::string incorrectGuesses;       // string that contains all of the incorrect guesses
     std::string correctGuesses;         // string that contains all of the correct guesses
     std::string allGuesses;             // string that contains all guesses
-    int numOfIncorrectGuesses;               // string that conatins the number of incorrect guesses
+    int numOfIncorrectGuesses = 0;      // int that conatins the number of incorrect guesses
 
 public:
     void startGame();                   // starts the game by randomly picking a word
@@ -28,5 +28,5 @@ public:
 
     void printBoard();                  // prints out the board
 
-    bool checkWin();                    // checks if the player has won the game
+    bool checkEnd();                    // checks if the player has won the game
 };
