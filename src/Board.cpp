@@ -15,7 +15,7 @@ void Board::startGame(){
     std::ifstream File("file.txt");
 
         srand(time(0));
-        random = rand() % 50;
+        random = rand() % 235886;
 
     while(std::getline(File, line))
     {
@@ -30,7 +30,6 @@ void Board::startGame(){
     for(int i = 0; i < this->word.size(); i++){
         this->correctGuesses += "_";
     }
-    std::cout << this->word << "\n";
     std::cout << "You have six wrong guesses. Good luck!" << std::endl;
 }
 
